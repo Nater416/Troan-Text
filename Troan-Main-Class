@@ -1,0 +1,162 @@
+import java.util.Scanner;
+
+public class SimpleGame {
+    public static void main(String[] args) {
+      Scanner input = new Scanner(System.in);
+      int counter = 1;
+      int counter2 = 1;
+      int range = 0;
+      int singleDPS = 0;
+      int splashDPS = 0;
+      int endurance = 0;
+      
+      while (counter == 1) {
+      System.out.println("Welcome to the land of the living! Choose your " + 
+              "character to begin:");
+      System.out.println();
+      System.out.printf("1: A courageous knight\n2: A sneaky archer \n3: "
+              + "An old wizard\n4: An overweight king\n\n");
+      System.out.println("To view abilities and DPS specs, type '5' plus the "
+              + "number of the character you are interested in. E.G., '51'.");
+      counter++;
+      int characterMain = input.nextInt();
+ switch (characterMain) {
+    case 1: System.out.println("You have selected the courageous knight!");
+            System.out.println("'I sense that arrogance will be your"
+                    + " downfall.'");
+            range = 0;
+            singleDPS = 100 + (int)(Math.random() * 20);
+            splashDPS = 40 + (int)(Math.random() * 10);
+            endurance = 120 + (int)(Math.random() * 20);
+            counter = 10;break;
+    case 2: System.out.println("You have selected the sneaky archer!");
+            System.out.println("Will you gain the trust of your companions?");
+            range = 3 + (int)(Math.random());
+            singleDPS = 150 + (int)(Math.random() * 30);
+            splashDPS = 0;
+            endurance = 100 + (int)(Math.random() * 30);
+            counter = 10;break;
+    case 3: System.out.println("You have selected the old wizard!");
+            System.out.println("Will you will you survive ere journey's end?");
+            range = 2 + (int)(Math.random());
+            singleDPS = 80 + (int)(Math.random() * 20);
+            splashDPS = 80 + (int)(Math.random() * 20);
+            endurance = 40 + (int)(Math.random() * 20);
+            counter = 10;break;            
+    case 4: System.out.println("You have selected the overweight king!");
+            System.out.println("Your greatest enemy is food.");
+            range = 0;
+            singleDPS = 20 + (int)(Math.random() * 10);
+            splashDPS = 40 + (int)(Math.random() * 10);
+            endurance = 30 + (int)(Math.random() * 20);
+            counter = 10;break;
+    case 51: System.out.println();
+             System.out.println("Character inquiry: Courageous Knight");
+             System.out.println();
+             System.out.println("Range             : 0");
+             System.out.println("Initial single DPS: 100-120");
+             System.out.println("Initial splash DPS: 40-50");
+             System.out.println("Initial Endurance : 120-140");
+             System.out.println();
+             System.out.println("Enter '1' to go back to Character Select");
+             while (counter2 == 1) {
+             int backSelection2 = input.nextInt();
+                  if (backSelection2 == 1) {
+                      counter2--;
+                      counter--;
+                  }
+                  else 
+                    System.out.println("Please enter '1'.");
+             }break;
+    case 52: System.out.println();
+             System.out.println("Character inquiry: Sneaky Archer");
+             System.out.println();
+             System.out.println("Range             : 3-4");
+             System.out.println("Initial single DPS: 150-180");
+             System.out.println("Initial splash DPS: 0");
+             System.out.println("Initial Endurance : 100-130");
+             System.out.println();
+             System.out.println("Enter '1' to go back to Character Select");
+             while (counter2 == 1) {
+             int backSelection2 = input.nextInt();
+                  if (backSelection2 == 1) {
+                      counter2--;
+                      counter--;
+                  }
+                  else 
+                    System.out.println("Please enter '1'.");
+             }break;
+    case 53: System.out.println();
+             System.out.println("Character inquiry: Old Wizard");
+             System.out.println();
+             System.out.println("Range             : 2-3");
+             System.out.println("Initial single DPS: 80-100");
+             System.out.println("Initial splash DPS: 80-100");
+             System.out.println("Initial Endurance : 40-60");
+             System.out.println();
+             System.out.println("Enter '1' to go back to Character Select");
+             while (counter2 == 1) {
+             int backSelection2 = input.nextInt();
+                  if (backSelection2 == 1) {
+                      counter2--;
+                      counter--;
+                  }
+                  else 
+                      System.out.println("Please enter '1'.");
+             }break;
+    case 54: System.out.println();
+             System.out.println("Character inquiry: Overweight King");
+             System.out.println();
+             System.out.println("Range             : 0");
+             System.out.println("Initial single DPS: 20-30");
+             System.out.println("Initial splash DPS: 40-50");
+             System.out.println("Initial Endurance : 30-50");
+             System.out.println();
+             System.out.println("Enter '1' to go back to Character Select");
+             while (counter2 == 1) {
+             int backSelection2 = input.nextInt();
+                  if (backSelection2 == 1) {
+                      counter2--;
+                      counter--;
+                  }
+                  else 
+                    System.out.println("Please enter '1'.");
+             }
+    default: System.out.println("Please type a valid number.");
+             counter--;
+ }
+      while (counter == 10) {
+          System.out.println("Your range is: " + range);
+          System.out.println("Your single target DPS is: " + singleDPS);
+          System.out.println("Your splash target DPS is: " + splashDPS);
+          System.out.println("Your endurance is: " + endurance);
+          System.out.println();
+          System.out.println("Your world is lost.");
+          System.out.println();
+          System.out.println("Once, long ago, the land of Troan was at peace."
+                  + "men and quafars alike lived their lives as farmers, "
+                  + "craftsmen, and merchants.");
+          System.out.println("However, one day,  to the dismay of all, one man"
+                  + " claimed power over all the citizens of Troan. Men, once"
+                  + " content");
+          System.out.println("with the respect of their peers "
+                  + "and financial success took advantage of the situation"
+                  + " and bullied the quafars. The men became lazy,");
+          System.out.println("making the quafars their slaves. One day, the "
+                  + "dreaded dragon who has no name, came from the south"
+                  + " and slaughtered the men.");
+          System.out.println("The quafars watched from a distance, and "
+                  + "because of their sheer numbers could have saved the"
+                  + "kingdom, but they merely turned away.");
+          System.out.println();
+          System.out.println("Your task is this: reclaim the kingdom of Troan,"
+                  + " regain the trust of the quafars, and defeat the nameless "
+                  + "dragon once and for all.");
+          System.out.println();
+          System.out.println("Good luck.");
+          counter++;
+    }
+    } 
+}
+}
+    
